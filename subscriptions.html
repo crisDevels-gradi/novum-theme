@@ -25,14 +25,13 @@
 
     {% if settings.customer_portal.subscription.add_product%}
         <button
-            class="rc_btn border-light text-uppercase title-bold"
+            class="btn type-3 pdn-35"
             onclick="addProductHandler(event);"
         >
             {{ 'cp_add_product_label' | t }}
         </button>
     {% endif %}
 </div>
-<br>
 
 {% if active_subscriptions | length %}
     <h2 class="page-title"> {{ 'cp_active_subscriptions' | t }} </h2>
@@ -49,7 +48,7 @@
                         <span class="rc_order_title"> {{ subscription.product_title | replace('Auto renew', '') }} </span>
                     </div>
 
-                    <p>
+                    <p class="rc_subcription--badge">
                         {% if subscription.status == 'ACTIVE' %}
                             {% include '_subscription-icon.svg' %}
                             {% if subscription.is_prepaid %}
@@ -91,7 +90,7 @@
 
                 <a
                     href="{{ subscription.id | subscription_url }}"
-                    class="rc_btn--secondary rc_btn--secondary--color text-uppercase title-bold text-center"
+                    class="btn type-1 pdn-35 rc_btn--link-url btn--edit"
                 >
                     {{ 'Edit' | t }}
                 </a>
@@ -121,7 +120,7 @@
                         {% endif %}
                     </div>
 
-                    <p>
+                    <p class="title-bold">
                         {% include '_subscription-icon.svg' %}
                         {% if subscription.is_prepaid %}
                             {{ 'pre_paid' | t }}
