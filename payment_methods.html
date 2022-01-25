@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="PaymentMethodsPage" class="payment-methods-page">
+  <h3 class="rc-heading d-flex justify-space-between align-items-center">
+    {{ 'cp_nav_payment_methods' | t }}
+  </h3>
+</div>
+
+<script>
+  {% include '_payment-methods.js' %}
+</script>
+{% endblock %}
