@@ -199,7 +199,7 @@ ReCharge.Toast = {
     },
     buildToaster: function() {
         var toaster = document.createElement('ul');
-        toaster.className = 'rc_toaster';
+        toaster.className = 'rc_toaster toaster-mymm';
         ReCharge.Toast.addToastListener(toaster);
 
         return toaster;

@@ -38,7 +38,7 @@
     {% for subscription in active_subscriptions | sort(attribute='next_charge_scheduled_at') %}
         <div class="rc_subscription_card_element_wrapper rc_subscription_container">
             <div class="rc_subscription_info_container">
-                <div class="rc_photo_container">
+                <div class="rc_small--photo">
                     {% set image_size = '100x100' %}
                     {% include '_product_image.html' %}
                 </div>
@@ -107,7 +107,7 @@
     {% for subscription in cancelled_expired_subscriptions %}
         <div class="rc_subscription_card_element_wrapper rc_inactive_subscriptions">
             <div class="rc_subscription_info_container">
-                <div class="rc_photo_container">
+                <div class="rc_small--photo">
                     {% set image_size = '100x100' %}
                     {% include '_product_image.html' %}
                 </div>

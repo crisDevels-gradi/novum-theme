@@ -7,7 +7,7 @@ ReCharge.Novum.Helpers = {
         return `
             <div class="element__flex-column">
                 <div>
-                    <img src="${imageSrc}" class="variant-image" alt="${ product.shopify_details.title.replace('Auto renew', '')}">
+                    <img style="height: 116px;" src="${imageSrc}" class="variant-image" alt="${ product.shopify_details.title.replace('Auto renew', '')}">
                 </div>
 
                 <h4>
@@ -15,14 +15,14 @@ ReCharge.Novum.Helpers = {
                 </h4>
 
                 <div class="d-flex align-items-center">
-                    <span class="js-rc_product_icon margin-right-5"> </span>
-                    <span id="variant-price" class="text-font-14 js-product-price" data-price="${price}" aria-live="polite">
+                    <span style="height: 16px;" class="js-rc_product_icon margin-right-5"> </span>
+                    <span id="variant-price" class="text-font-14 js-product-price title-bold" data-price="${price}" aria-live="polite">
                         ${ReCharge.Novum.Utils.getCurrency()}${Number(price).toFixed(2)}
                     </span>
                 </div>
             </div>
 
-            <label class="text-font-14">{{ 'Quantity' | t }}</label>
+            <label class="title-bold">{{ 'Quantity' | t }}</label>
             <div class="rc_product_quantity border-light margin-top-8" onclick="ReCharge.Novum.Helpers.quantityHandler(event)">
                 <button class="button-minus margin-left-5" aria-label="minus one quantity" style="${settings.customer_portal.subscription.change_quantity ? '' : 'pointer-events:none;visibility:hidden;' }">-</button>
                 <input
@@ -310,7 +310,7 @@ ReCharge.Novum.Helpers = {
 
             deliveryOptions = `
                 <div>
-                    <label for="charge_interval_frequency" class="text-font-14">
+                    <label for="charge_interval_frequency" class="title-bold">
                         {{ 'delivery_schedule_label' | t }}
                     </label>
                     <input type="hidden" name="charge_interval_frequency" value="${charge_interval_frequency}">
@@ -371,8 +371,8 @@ ReCharge.Novum.Helpers = {
                     data-id="${id}"
                 >
                 ${value === 'subscription'
-                    ? `<label for="${value}">{{ 'Subscribe' | t }}</label>`
-                    : `<label for="${value}">{{ 'cp_onetime' | t }}</label>`
+                    ? `<label class="text-font-14" for="${value}">{{ 'Subscribe' | t }}</label>`
+                    : `<label class="text-font-14" for="${value}">{{ 'cp_onetime' | t }}</label>`
                 }
             </div>
             <br>
@@ -445,7 +445,7 @@ ReCharge.Novum.Helpers = {
         });
 
         datesContainer.innerHTML = `
-            <label for="address_charge_dates" class="text-font-14">{{ 'First_shipment_date' | t }}</label>
+            <label for="address_charge_dates" class="title-bold">{{ 'First_shipment_date' | t }}</label>
             <select class="margin-top-8" id="address_charge_dates" onchange="ReCharge.Novum.Helpers.renderCustomDate(event)">
                 ${dateValues}
             </select>
@@ -663,7 +663,7 @@ ReCharge.Novum.Helpers = {
                 }
 
                 <div id="product_variant_container">
-                    <p class="text-font-14">{{ 'cp_variants' | t }}</p>
+                    <p class="title-bold">{{ 'cp_variants' | t }}</p>
                     <ul id="product_options_container"></ul>
                 </div>
                 <button type="submit" class="rc_btn text-uppercase title-bold">

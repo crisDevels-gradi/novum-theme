@@ -164,7 +164,7 @@ body#recharge-novum #recharge-te input,
 body#recharge-novum #recharge-te #rc_te-template-wrapper input,
 body#recharge-novum #recharge-te select,
 body#recharge-novum #recharge-te #rc_te-template-wrapper select {
-  padding: 10px;
+  padding: 10px 20px;
   background-color: var(--color-white);
   font-size: 14px;
 }
@@ -173,11 +173,15 @@ body#recharge-novum #recharge-te select,
 body#recharge-novum #recharge-te #rc_te-template-wrapper select {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid var(--color-light-blue);
+  border: 1px solid var(--color-black);
   margin-bottom: 15px;
-  background-image: unset;
-  -webkit-appearance: menulist;
-  appearance: menulist;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Angle_down_font_awesome.svg/512px-Angle_down_font_awesome.svg.png");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: calc(50%);
+  background-size: 20px;
 }
 
 body#recharge-novum #recharge-te .rc_purchase_type {
@@ -197,6 +201,12 @@ body#recharge-novum #recharge-te .rc_delivery_options label {
 body#recharge-novum #recharge-te .rc_purchase_type input,
 body#recharge-novum #recharge-te .rc_delivery_options input {
   flex-basis: 10%;
+}
+
+body#recharge-novum #recharge-te input[type="radio"],
+body#recharge-novum #recharge-te input[type="radio"] {
+  accent-color: var(--color-black);
+  height: 16px;
 }
 
 body#recharge-novum #recharge-te #rc_te-template-wrapper select,
@@ -243,7 +253,7 @@ body#recharge-novum .rc_form {
 }
 
 body#recharge-novum label {
-  margin-bottom: 5px;
+  font-size: 14px;
 }
 
 body#recharge-novum input:checked+label {
@@ -253,7 +263,7 @@ body#recharge-novum input:checked+label {
 body#recharge-novum ul.rc_toaster {
   position: fixed;
   max-width: 85%;
-  color: var(--color-white);
+  color: var(--color-black) !important;
   bottom: 27px;
   margin: 0;
   padding: 0;
@@ -270,13 +280,20 @@ body#recharge-novum ul.rc_toaster {
 body#recharge-novum li.rc_toast {
   width: 100%;
   padding: 12px 15px;
-  background: #AAA;
-  color: var(--color-white);
+  border: 1px solid var(--color-black) !important;
+  background-color: var(--color-white);
+  border-radius: 8px !important;
   margin: 10px 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-animation: popup 0.6s cubic-bezier(0.1, 1.06, 0.6, 1.34), hide 0.4s 3s;
   animation: popup 0.6s cubic-bezier(0.1, 1.06, 0.6, 1.34), hide 0.4s 3s;
+}
+
+body#recharge-novum.toaster-mymm {
+  border: 1px solid var(--color-black) !important;
+  background-color: var(--color-white);
+  border-radius: 8px !important;
 }
 
 body#recharge-novum li.rc_toast p,
@@ -291,7 +308,8 @@ body#recharge-novum li.rc_toast p:before {
 }
 
 body#recharge-novum li.rc_toast p {
-  color: var(--color-white);
+  color: var(--color-black);
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }
@@ -785,12 +803,18 @@ body#recharge-novum #recharge-te .element__flex-column {
 
 body#recharge-novum #recharge-te .rc_photo_container img,
 body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_photo_container img,
-body#recharge-novum #recharge-te .rc_image_container img,
-body#recharge-novum #recharge-te img {
+body#recharge-novum #recharge-te .rc_image_container img {
   object-fit: cover;
   height: 194px;
   max-width: 100%;
   min-width: 100%;
+}
+
+.rc_small--photo img {
+  object-fit: cover;
+  height: 94px;
+  max-width: 94px;
+  min-width: 94px;
 }
 
 /* ReCharge buttons begin */
@@ -1193,8 +1217,10 @@ body#recharge-novum #recharge-te .rc_product_list_container,
 body#recharge-novum #recharge-te #rc__upsells--container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  column-gap: 10px;
+  column-gap: 34px;
+  grid-column-gap: 34px;
   row-gap: 10px;
+  grid-row-gap: 10px;
   margin: 15px 0px;
 }
 
@@ -1211,30 +1237,34 @@ body#recharge-novum #recharge-te #rc__upsells--container li {
 /* add product details */
 
 body#recharge-novum #recharge-te .rc_product_quantity {
-  width: 30%;
-  display: grid;
-  grid-template-rows: 42px;
-  grid-template-columns: 15px 40px 15px;
-  grid-gap: 14px;
-  text-align: center;
+  width: 20%;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #BDBDBD;
+  position: relative;
+  display: flex;
   align-items: center;
-  overflow: hidden;
+  justify-content: center;
 }
 
 body#recharge-novum #recharge-te .rc_product_quantity input {
+  width: 100%;
+  font-size: 12px;
+  padding: 0px;
+  padding-left: 15px;
+  font-weight: 600;
   outline: none;
   border: none;
-  font-size: 16px;
-  padding: 0px;
-  padding-left: 8px;
-  height: 30px;
 }
 
-body#recharge-novum #recharge-te .rc_product_quantity .button-minus,
-body#recharge-novum #recharge-te .rc_product_quantity .button-plus
+body#recharge-novum #recharge-te .rc_product_quantity button.button-minus,
+body#recharge-novum #recharge-te .rc_product_quantity button.button-plus
  {
-  font-weight: 700;
+  width: auto !important;
+  padding: 0;
+  margin: 0;
   font-size: 20px;
+  background: transparent;
   cursor: pointer;
   border: none !important;
   margin-bottom: 0 !important;

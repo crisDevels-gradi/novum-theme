@@ -102,7 +102,7 @@ function renderAddProductDetails(product) {
         </div>
 
         <div id="product_variant_container" ${shouldDisplayVariants ? '' : `style="display: none;"`} >
-            <p class="text-font-14"> {{ 'cp_variants' | t }} </p>
+            <p class="title-bold"> {{ 'cp_variants' | t }} </p>
             <ul id="product_options_container"></ul>
         </div>
 
@@ -125,7 +125,7 @@ function renderAddProductDetails(product) {
         const shipsToLabel = `{{ 'ships_to' | t }}`;
         const shippingAndBillingLabel = `{{ 'cp_subscription_shipping_and_billing' | t }}`;
 
-        return `<label for="address_id" class="text-font-14"> ${isRcpmEnabled ? shippingAndBillingLabel : shipsToLabel} </label>`;
+        return `<label for="address_id" class="title-bold"> ${isRcpmEnabled ? shippingAndBillingLabel : shipsToLabel} </label>`;
     };
 
     addressesContainer.innerHTML = `

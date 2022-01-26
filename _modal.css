@@ -19,7 +19,6 @@ body#recharge-novum #recharge-te #te-card-modal {
 @media (max-width: 460px) {
   body#recharge-novum #recharge-te #rc_te-template-wrapper button, 
   body#recharge-novum #recharge-te button {
-    background-color: var(--color-transparent);
     width: 100%;
   } 
   
