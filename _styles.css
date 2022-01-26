@@ -1,4 +1,4 @@
-|||*,
+*,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
@@ -132,7 +132,7 @@ body#recharge-novum #recharge-te #rc_te-template-wrapper h3,
 body#recharge-novum #recharge-te h3 {
   font-family: var(--recharge-heading-primary-font);
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 38px;
   line-height: 40px;
   color: var(--primary-color);
@@ -166,7 +166,7 @@ body#recharge-novum #recharge-te select,
 body#recharge-novum #recharge-te #rc_te-template-wrapper select {
   padding: 10px;
   background-color: var(--color-white);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 body#recharge-novum #recharge-te select,
@@ -403,14 +403,14 @@ Custom styles
 body#recharge-novum #recharge-te .rc_page-width {
   padding-left: 55px;
   padding-right: 55px;
-  max-width: 1200px;
+  max-width: 930px;
   margin: 0 auto;
 }
 
 body#recharge-novum #recharge-te .border-light,
 body#recharge-novum #recharge-te #rc_te-template-wrapper .border-light {
-  border-radius: 5px;
-  border: 1px solid var(--color-light-blue);
+  border-radius: 10px;
+  border: 1px solid var(--color-black);
 }
 
 body#recharge-novum #recharge-te .text-uppercase,
@@ -548,7 +548,6 @@ body#recharge-novum #recharge-te #te-modal-content input[type = text] {
 }
 
 body#recharge-novum #recharge-te .rc_product_list_container .product-title {
-  height: 29px;
   font-family: var(--recharge-te-secondary-font);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -613,8 +612,18 @@ body#recharge-novum #recharge-te #rc_te-template-wrapper .rc-card .font-spacing 
   font-weight: 600 !important;
 }
 
+.rc_product_card .rc_subcription--badge {
+  justify-content: center;
+}
+
 .rc_subcription--badge svg {
   margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .rc_subcription--badge {
+    justify-content: center;
+  }
 }
 /* general styles end */
 
@@ -695,7 +704,7 @@ body#recharge-novum #recharge-te .nav--wrapper--margin {
 }
 
 body#recharge-novum #recharge-te .nav__list--desktop {
-  max-width: 1200px;
+  max-width: 800px;
   width: 100%;
   font-size: 12px;
   line-height: 14px;
@@ -756,6 +765,13 @@ body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_subscription_card_e
   border: 1px solid var(--color-black);
 }
 
+@media screen and (max-width: 768px) {
+  body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_subscription_card_element_wrapper {
+    padding: 20px;
+  }
+}
+
+
 body#recharge-novum #recharge-te .element__border--top {
   border-top: 2px solid var(--color-thin-blue);
   padding: 16px 0 16px 0px;
@@ -771,10 +787,10 @@ body#recharge-novum #recharge-te .rc_photo_container img,
 body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_photo_container img,
 body#recharge-novum #recharge-te .rc_image_container img,
 body#recharge-novum #recharge-te img {
-  object-fit: contain;
-  max-height: 100px;
-  max-width: 100px;
-  min-width: 100px;
+  object-fit: cover;
+  height: 194px;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 /* ReCharge buttons begin */
@@ -866,8 +882,8 @@ body#recharge-novum #recharge-te #ReChargeForm_skip button,
 body#recharge-novum #recharge-te #rc_cancellation_reasons_list button,
 body#recharge-novum #recharge-te #te-modal-content button {
   width: 100%;
-  border-radius: 5px;
-  border: 1px solid var(--color-light-blue);
+  border-radius: 8px;
+  border: 1px solid var(--color-black);
   margin-bottom: 15px;
 }
 
@@ -883,6 +899,10 @@ body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_loader {
 body#recharge-novum #recharge-te #rc_te-template-wrapper .expired {
   border-color: var(--color-subscription-expired);
   color: var(--color-subscription-expired);
+}
+
+.rc_add_product {
+  margin-bottom: 39px;
 }
 
 body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_add_product,
@@ -1071,6 +1091,7 @@ body#recharge-novum #recharge-te .rc_order_title_container {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 body#recharge-novum #recharge-te #rc_te-template-wrapper .margin-right-10,
@@ -1156,7 +1177,7 @@ body#recharge-novum #recharge-te .order-photo img {
 /* orders page styles end */
 
 body#recharge-novum #recharge-te #search-container {
-  padding: 5px;
+  padding: 5px 20px;
 }
 
 body#recharge-novum #recharge-te #search-container input {
@@ -1183,7 +1204,7 @@ body#recharge-novum #recharge-te #rc_te-template-wrapper #rc__upsells--container
 
 body#recharge-novum #recharge-te .rc_product_list_container li,
 body#recharge-novum #recharge-te #rc__upsells--container li {
-  padding: 10px;
+  padding: 0;
   min-height: 200px;
 }
 
@@ -1361,9 +1382,6 @@ body#recharge-novum #recharge-te #rc_te-template-wrapper .address-info-msg {
     justify-content: space-between;
     align-items: center;
   }
-  .rc_add_product {
-    margin-bottom: 39px;
-  }
   body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_add_product h3 {
     margin-bottom: 0px;
   }
@@ -1376,6 +1394,10 @@ body#recharge-novum #recharge-te #rc_te-template-wrapper .address-info-msg {
   }
   body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_next_charge_date a {
     margin-left: 30px;
+  }
+
+  .margin-top-section {
+    margin-top: 50px;
   }
   body#recharge-novum #recharge-te #rc_te-template-wrapper .rc_inactive_subscriptions {
     display: flex;

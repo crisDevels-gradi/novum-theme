@@ -1,10 +1,12 @@
 <div id="te-modal" tabindex="-1" aria-hidden="true">
     <header id="te-modal-heading" tabindex="-1">
         <button class="js-back-btn back-btn" aria-label="back" style="visibility: hidden;" aria-hidden="true">
-            <i class="fas fa-arrow-left"></i>
+          <i class="fas fa-arrow-left"></i>
         </button>
         <span class="te-modal-title"></span>
-        <button aria-label="close sidebar" class="close-sidebar close-btn"><i class="fa fa-times"></i></button>
+        <button aria-label="close sidebar" class="close-sidebar close-btn">
+          {% include '_svg-close.svg' %}
+        </button>
     </header>
     <div id="te-modal-content"></div>
 </div>

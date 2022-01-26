@@ -191,7 +191,7 @@ function reactivateSubscriptionHandler(evt) {
             <input type="hidden" name="redirect_url" value="${redirectUrl}">
             <p class="text-font-14"> {{ 'cp_your_subscription_will_be_reactivated' | t }} </p>
             <br>
-            <button type="submit" class="rc_btn"> {{ 'Re-activate' | t }} </button>
+            <button type="submit" class="btn type-3 pdn-35 rc_btn--link-url btn--edit width-100"> {{ 'Re-activate' | t }} </button>
         </form>
     `;
 

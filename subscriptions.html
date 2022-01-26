@@ -48,7 +48,7 @@
                         <span class="rc_order_title"> {{ subscription.product_title | replace('Auto renew', '') }} </span>
                     </div>
 
-                    <p class="rc_subcription--badge">
+                    <p class="title-bold  rc_subcription--badge">
                         {% if subscription.status == 'ACTIVE' %}
                             {% include '_subscription-icon.svg' %}
                             {% if subscription.is_prepaid %}
@@ -103,7 +103,7 @@
 
 
 {% if cancelled_expired_subscriptions | length %}
-    <h2 class="page-title"> {{ 'cp_inactive_subscriptions' | t }} </h2>
+    <h2 class="page-title margin-top-section"> {{ 'cp_inactive_subscriptions' | t }} </h2>
     {% for subscription in cancelled_expired_subscriptions %}
         <div class="rc_subscription_card_element_wrapper rc_inactive_subscriptions">
             <div class="rc_subscription_info_container">
@@ -120,7 +120,7 @@
                         {% endif %}
                     </div>
 
-                    <p class="title-bold">
+                    <p class="title-bold rc_subcription--badge">
                         {% include '_subscription-icon.svg' %}
                         {% if subscription.is_prepaid %}
                             {{ 'pre_paid' | t }}
@@ -137,7 +137,7 @@
             {% if settings.customer_portal.subscription.reactivate_subscription%}
                 <div>
                     <button
-                        class="text-uppercase width-100 {{ 'expired' if subscription.status == 'EXPIRED' else 'rc_btn--secondary rc_btn--secondary--color' }}"
+                        class="btn type-1 pdn-35 rc_btn--link-url btn--edit width-100"
                         {{ 'disabled' if subscription.status == 'EXPIRED' else '' }}
                         onclick="reactivateSubscriptionHandler(event);"
                         data-id="{{ subscription.id }}"

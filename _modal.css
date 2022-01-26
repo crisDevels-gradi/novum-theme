@@ -5,12 +5,12 @@ body.locked {
 
 body#recharge-novum #recharge-te #te-modal, 
 body#recharge-novum #recharge-te #te-card-modal {
-  width: 380px;
+  width: 486px;
   height: 100vh;
   position: fixed;
   z-index: 100000 !important;
   top: 0;
-  right: -466px;
+  right: -566px;
   transition: 300ms ease-in-out all;
   background: var(--color-white);
   box-shadow: 0px 2px 4px rgba(0,0,0, 0.1);
@@ -48,9 +48,11 @@ body#recharge-novum #recharge-te #te-card-modal-heading {
 }
 
 body#recharge-novum #recharge-te .te-modal-title {
+  font-family: var(--recharge-heading-primary-font);
+  font-weight: normal;
   margin-bottom: 0;
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 38px;
+  text-align: center;
 }
 
 body#recharge-novum #recharge-te #te-modal-heading .close-sidebar, 
@@ -60,6 +62,8 @@ body#recharge-novum #recharge-te #te-modal-heading .back-btn {
   color: var(--color-gray);
   cursor: pointer;
   border: none;
+  padding: 0;
+  background: transparent;
 }
 
 body#recharge-novum #recharge-te #te-modal-content, 

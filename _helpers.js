@@ -736,21 +736,21 @@ ReCharge.Novum.Helpers = {
 
         if (storefront_purchase_options === 'subscription_only'){
           return `
-            <p>
+            <p class="title-bold rc_subcription--badge">
                 {% include '_subscription-icon.svg' %}
                 ${currency}${subPrice.toFixed(2)}
             </p>
         `
         } else if (storefront_purchase_options === 'onetime_only') {
           return `
-            <p>
+            <p class="title-bold rc_subcription--badge">
                 {% include '_onetime-icon.svg' %}
                 ${currency}${otpPrice.toFixed(2)}
             </p>
         `
         } else {
           return `
-            <p>
+            <p class="title-bold rc_subcription--badge">
                 {% include '_onetime-icon.svg' %}
                 ${currency}${otpPrice.toFixed(2)}
                 <svg class="vertical-divider" width="1" height="9" fill="none"><path d="M.962 8.553H.234V.125h.728v8.428z" fill="var(--color-dark-green)"/></svg>
@@ -772,7 +772,7 @@ ReCharge.Novum.Helpers = {
             const { title, shopify_id } = product.shopify_details;
 
             productsContainer.innerHTML += `
-                <li class="rc_product_card border-light text-center rc_single_product_card-wrapper" id="product_${shopify_id}">
+                <li class="rc_product_card text-center rc_single_product_card-wrapper" id="product_${shopify_id}">
                     <div class="rc_image_container">
                         <img src="${ReCharge.Novum.Utils.getImageUrl(product)}" alt="${product.title}" class="rc_img__sidebar" height="100px" width="100px">
                     </div>
